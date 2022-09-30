@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RuleService } from '../services/citys.service';
+import { CityService } from '../services/citys.service';
 import Swal from 'sweetalert2'
 @Component({
   selector: 'app-citys',
@@ -13,7 +13,7 @@ export class citysComponent implements OnInit {
   fieldsList: any = []
   validador: any = {}
 
-  constructor(private rulesService: RuleService) {
+  constructor(private cityService: CityService) {
   }
   // this.fieldsList[index].required = event.target.checked;
 
@@ -23,7 +23,7 @@ export class citysComponent implements OnInit {
 
   async getData() {
     this.form = {}
-    this.rules = await this.rulesService.showRules()
+    this.rules = await this.cityService.showRules()
     console.log(this.rules);
   }
 

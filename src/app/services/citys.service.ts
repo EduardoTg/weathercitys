@@ -4,7 +4,7 @@ import CONFIG from '../config';
 
 @Injectable()
 
-export class  RuleService {
+export class  CityService {
 
   constructor(public http: HttpClient) { }
 

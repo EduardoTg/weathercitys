@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { HttpModule } from "@angular/http";
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from "@angular/platform-browser";
 import { LocationStrategy, HashLocationStrategy } from "@angular/common";
 import { AppComponent } from "./app.component";
@@ -13,7 +13,7 @@ import { AppRoutingModule } from "./app.routing";
 import { FullLayoutComponent } from "./layouts/full-layout.component";
 // services
 import { DataTableModule } from "ng-angular8-datatable";
-import { RuleService } from "./services/citys.service";
+import { CityService } from "./services/citys.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // components
 import { CitysModule } from "../app/citys/citys.module";
@@ -22,7 +22,7 @@ import { CitysModule } from "../app/citys/citys.module";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     DataTableModule,
     BrowserAnimationsModule,
     CitysModule,
@@ -35,7 +35,7 @@ import { CitysModule } from "../app/citys/citys.module";
     AsideToggleDirective,
   ],
   providers: [
-    RuleService,
+    CityService,
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
