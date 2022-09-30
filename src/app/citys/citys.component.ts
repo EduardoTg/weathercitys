@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RuleService } from '../services/citys.service';
-import * as _ from 'lodash'
-import swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-citys',
   templateUrl: './citys.component.html',
@@ -50,10 +49,10 @@ export class citysComponent implements OnInit {
     console.log(validationRules.length);
     if (validationRules.length > 1) {
       this.fieldsList[index].rules.pop();
-      swal.fire({
+      Swal.fire({
         title: '',
         text: "Element duplicated",
-        type: 'warning',
+        icon: 'warning',
       })
     }
     else {
@@ -70,10 +69,10 @@ export class citysComponent implements OnInit {
   }
 
   deleteRule(index: number) {
-    swal.fire({
+    Swal.fire({
       title: '',
       text: "Are you sure delete rule?",
-      type: 'warning',
+      icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#d33',
       cancelButtonColor: '#3085d6',
@@ -85,10 +84,10 @@ export class citysComponent implements OnInit {
   }
 
   deleteArgument(index: number, indexRule: number) {
-    swal.fire({
+    Swal.fire({
       title: '',
       text: "Are you sure delete argument?",
-      type: 'warning',
+      icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#d33',
       cancelButtonColor: '#3085d6',
