@@ -11,21 +11,21 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "postinstall": "ng build --aot --configuration production"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^11.2.14",
-    "@angular/common": "^11.2.14",
-    "@angular/compiler": "^11.2.14",
-    "@angular/core": "^11.2.14",
-    "@angular/forms": "^11.2.14",
+    "@angular/animations": "^12.2.16",
+    "@angular/common": "^12.2.16",
+    "@angular/compiler": "^12.2.16",
+    "@angular/core": "^12.2.16",
+    "@angular/forms": "^12.2.16",
     "@angular/http": "^7.2.16",
-    "@angular/platform-browser": "^11.2.14",
-    "@angular/platform-browser-dynamic": "^11.2.14",
-    "@angular/platform-server": "^11.2.14",
-    "@angular/router": "^11.2.14",
-    "@angular/upgrade": "11.2.14",
+    "@angular/platform-browser": "^12.2.16",
+    "@angular/platform-browser-dynamic": "^12.2.16",
+    "@angular/platform-server": "^12.2.16",
+    "@angular/router": "^12.2.16",
+    "@angular/upgrade": "12.2.16",
     "core-js": "3.25.3",
     "express": "^4.18.1",
     "katex": "^0.16.2",
@@ -36,12 +36,12 @@
     "nodemon": "^2.0.20",
     "rxjs": "^7.5.7",
     "sweetalert2": "^11.4.35",
-    "zone.js": "0.11.8"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1102.19",
-    "@angular/cli": "^11.2.19",
-    "@angular/compiler-cli": "^11.2.14",
+    "@angular-devkit/build-angular": "^12.2.18",
+    "@angular/cli": "^12.2.18",
+    "@angular/compiler-cli": "^12.2.16",
     "@types/jasmine": "3.5.0",
     "@types/node": "^13.1.6",
     "codelyzer": "~6.0.2",
@@ -55,7 +55,7 @@
     "protractor": "^7.0.0",
     "ts-node": "10.9.1",
     "tslint": "^6.1.3",
-    "typescript": "4.0.8"
+    "typescript": "4.3.5"
   },
   "engines": {
     "node": "12.16.3",
