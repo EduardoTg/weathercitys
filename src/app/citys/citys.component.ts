@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { RuleService } from '../services/campos.service';
+import { RuleService } from '../services/citys.service';
 import * as _ from 'lodash'
 import swal from 'sweetalert2'
 @Component({
-  selector: 'app-campo',
-  templateUrl: './campo.component.html',
+  selector: 'app-citys',
+  templateUrl: './citys.component.html',
   styleUrls: ['./style.css']
 })
-export class campoComponent implements OnInit {
+export class citysComponent implements OnInit {
 
   rules: any = []
   form: any = {};

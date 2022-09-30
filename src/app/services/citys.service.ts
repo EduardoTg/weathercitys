@@ -11,9 +11,9 @@ export class  RuleService {
 
   showRules() {
     return new Promise((resolve, reject) => {
-      this.http.get(CONFIG.API + 'campo', sendToken())
-        .subscribe((campos) => {
-          resolve(campos.json())
+      this.http.get(CONFIG.API + 'citys', sendToken())
+        .subscribe((citys) => {
+          resolve(citys.json())
         }, (err) => {
           reject(err)
         })

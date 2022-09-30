@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "campos": {
+    "citys": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -48,18 +48,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "campos:build"
+            "browserTarget": "citys:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "campos:build:production"
+              "browserTarget": "citys:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "campos:build"
+            "browserTarget": "citys:build"
           }
         },
         "test": {
@@ -89,7 +89,7 @@
         }
       }
     },
-    "campos-e2e": {
+    "citys-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -98,7 +98,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "campos:serve"
+            "devServerTarget": "citys:serve"
           }
         },
         "lint": {
@@ -113,7 +113,7 @@
       }
     }
   },
-  "defaultProject": "campos",
+  "defaultProject": "citys",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

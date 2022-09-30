@@ -16,8 +16,10 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { AuthServiceService } from './services/auth-service.service';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { DataTableModule } from 'ng-angular8-datatable';
-import { RuleService } from './services/campos.service';
+import { RuleService } from './services/citys.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// components
+import {CitysModule } from '../app/citys/citys.module'
 @NgModule({
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpModule,
     DataTableModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CitysModule
   ],
   declarations: [
     AppComponent,

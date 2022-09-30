@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FullLayoutComponent } from './layouts/full-layout.component';
+import { citysComponent } from '../app/citys/citys.component'
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'campo',
+        redirectTo: 'citys',
         pathMatch: 'full'
 
     },
@@ -14,8 +15,8 @@ export const routes: Routes = [
         component: FullLayoutComponent,
         children: [
             {
-                path: 'campo',
-                loadChildren: './citys/campo.module#campoModule'
+                path: 'citys',
+                component : citysComponent
             }
         ]
 

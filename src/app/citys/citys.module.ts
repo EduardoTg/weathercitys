@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { campoComponent } from './campo.component';
-import { campoRoutingModule } from './campo-routing.module';
+import { citysComponent } from './citys.component';
+import { citysRoutingModule } from './citys-routing.module';
 import { DataTableModule } from 'ng-angular8-datatable';
 @NgModule({
+  declarations: [
+    citysComponent        
+],
   imports: [
     CommonModule,
     FormsModule,
-    campoRoutingModule,
+    //citysRoutingModule,
     DataTableModule,
+    
   ],
-  declarations: [campoComponent]
+  //declarations: [citysComponent]
 })
-export class campoModule { }
+export class CitysModule { }
