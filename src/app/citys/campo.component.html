@@ -1,0 +1,73 @@
+<div class="animated fadeIn">
+  <div class="row" style="padding-top: 10px;">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header spaceBetween">
+          <strong>Fields List</strong>
+          <div class="buttonHeaderContainer">
+            <button class="btn btn-success col-6 mr-1" (click)='addField()'>Add Field</button>
+            <button class="btn btn-primary col-6" (click)='save()'>Save </button>
+          </div>
+        </div>
+        <div class="card-block">
+          <div class="row">
+            <label class="col-lg-3 desktop">Name</label>
+            <label class="col-lg-1 desktop pl-0">Required</label>
+            <label class="col-lg-3 desktop">Rule Name </label>
+            <label class="col-lg-3 desktop">Rule Argument</label>
+          </div>
+          <div class="row mt-2" *ngFor='let field of fieldsList; let i = index'>
+            <div class="col-lg-3 mt-1">
+              <label class="col-lg-3 mobil">Name</label>
+              <input type="text" class="form-control" [(ngModel)]='field.name' />
+            </div>
+            <div class="col-lg-1  mt-1 text-center-lg">
+              <label class="col-lg-1 mobil">Required</label>
+              <input type="checkbox" class="form-check-input ml-1" [(ngModel)]='field.required'>
+            </div>
+            <!--   <div class="col-lg-2 mt-1">
+            <label class="col-lg-1 mobil">Select Rule</label>
+              <select class="form-control" [(ngModel)]='field.ru' (change)='etapasParaDescripcion()'>
+                <option *ngFor='let rule of rules' [value]="rule._id">
+                  {{rule.name}}
+                </option>
+              </select> 
+            </div>-->
+            <div class="col-lg-6 mt-1">
+              <div class="row" *ngFor="let rule of field.rules; let indexRule = index">
+                <div class="col-lg-4 mt-1">
+                  <label class="col-lg-1 mobil">Select Rule</label>
+                  <select class="form-control" [(ngModel)]="rule.name"
+                    (change)='addRuleType(i, indexRule, $event.target.value)'>
+                    <option *ngFor='let rule of rules' [value]="rule.name">
+                      {{rule.name}}
+                    </option>
+                  </select>
+                </div>
+
+                <div class="col-lg-3" *ngFor="let argument of rule.arguments">
+                  <label class="">{{argument}}</label>
+                  <input type="text" class="form-control"
+                    (input)="addValueArgument(argument, $event.target.value, i, indexRule )" />
+                </div>
+
+                <div class="col-lg-2">
+                  <label style="color: #f86c6b;" class="cursor" (click)='deleteArgument(i, indexRule)'>Delete
+                    argument</label>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-1 mt-1">
+              <button class="btn btn-success w-lg-100" (click)='addRule(i)'>Add rule </button>
+            </div>
+            <div class="col-lg-1 mt-1">
+              <label style="color: #f86c6b;" class="cursor" (click)='deleteRule(i)'>Delete</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
