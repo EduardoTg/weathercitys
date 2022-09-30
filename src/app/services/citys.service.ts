@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import CONFIG from '../config';
-import sendToken from '../auth.interceptor';
 
 @Injectable()
 
 export class  RuleService {
 
-  constructor(public http: Http) { }
+  constructor(public http: HttpClient) { }
 
   showRules() {
     return new Promise((resolve, reject) => {
-      this.http.get(CONFIG.API + 'citys', sendToken())
+      this.http.get(CONFIG.API + 'citys')
         .subscribe((citys) => {
-          resolve(citys.json())
+          resolve(citys)
         }, (err) => {
           reject(err)
         })
